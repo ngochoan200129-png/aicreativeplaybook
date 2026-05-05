@@ -779,8 +779,8 @@ async function genPrompt(){
   const tl={image:'ảnh',video:'video',vo:'Voice Over',faceswap:'faceswap'}[tp];
   const msg=`Tạo prompt ${tl}:\nChủ thể: ${subj||'—'}\n${action?'Hành động: '+action:''}\n${style?'Phong cách: '+style:''}\n${cam?'Camera: '+cam:''}\n${light?'Ánh sáng: '+light:''}\n${extra?'Thêm: '+extra:''}\nChỉ trả về prompt hoàn chỉnh sẵn sàng copy, không giải thích.`;
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYS,messages:[{role:'user',content:msg}]})});
-    const d=await r.json();ot.textContent=d.content?.[0]?.text||'Lỗi.';
+    const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:SYS,messages:[{role:'user',content:msg}]})});
+    const d=await r.json();ot.textContent=d.text||d.error||'Lỗi.';
   }catch(e){ot.textContent='Lỗi kết nối!';}
 }
 
@@ -795,8 +795,8 @@ async function sendMsg(){
   if(!txt) return;
   inp.value='';addMsg('usr',txt);showTyping();
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:SYS,messages:[{role:'user',content:txt}]})});
-    const d=await r.json();rmTyping();addMsg('bot',d.content?.[0]?.text||'Không có phản hồi.');
+    const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:SYS,messages:[{role:'user',content:txt}]})});
+    const d=await r.json();rmTyping();addMsg('bot',d.text||d.error||'Không có phản hồi.');
   }catch(e){rmTyping();addMsg('bot','Lỗi kết nối!');}
 }
 
