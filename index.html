@@ -173,6 +173,31 @@ body{font-family:'Syne',sans-serif;background:var(--black);color:var(--text);dis
 .out-txt{padding:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2);line-height:1.75;white-space:pre-wrap}
 .out-cp{padding:5px 12px;border:1px solid var(--border2);border-radius:6px;background:transparent;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;cursor:pointer;color:var(--text3);text-transform:uppercase;transition:all .2s}
 .out-cp:hover{border-color:var(--amber);color:var(--amber);background:var(--adim)}
+
+
+/* === HOMEPAGE OS REFACTOR === */
+.os-home{padding:22px 28px 36px;background:
+  radial-gradient(circle at 72% 18%,rgba(212,168,71,.16),transparent 28%),
+  radial-gradient(circle at 28% 30%,rgba(99,64,255,.10),transparent 30%),
+  linear-gradient(135deg,rgba(255,255,255,.035),transparent 36%),var(--black);}
+.os-shell{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:18px;align-items:start;max-width:1440px;margin:0 auto}
+.os-top{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.os-mark{display:flex;align-items:center;gap:12px}
+.os-logo{width:42px;height:42px;border:1px solid rgba(212,168,71,.45);border-radius:50%;display:grid;place-items:center;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:800;color:var(--amber);box-shadow:0 0 28px rgba(212,168,71,.10)}
+.os-kicker{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.22em;color:var(--amber);text-transform:uppercase;margin-bottom:3px}
+.os-name{font-family:'Barlow Condensed',sans-serif;font-size:23px;font-weight:800;letter-spacing:.06em;color:var(--text);text-transform:uppercase}
+.os-search{width:min(420px,40vw);height:42px;border:1px solid var(--border2);border-radius:999px;background:rgba(26,25,23,.58);display:flex;align-items:center;gap:10px;padding:0 16px;color:var(--text3);font-size:12px;backdrop-filter:blur(14px)}
+.os-actions{display:flex;gap:8px;align-items:center}.os-mini{height:38px;padding:0 14px;border:1px solid var(--border2);background:rgba(26,25,23,.45);color:var(--text2);border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase}.os-primary{height:42px;padding:0 18px;border:1px solid var(--amber);background:var(--amber);color:var(--black);border-radius:999px;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 0 34px rgba(212,168,71,.18)}
+.hero-os{position:relative;min-height:430px;border:1px solid var(--border);border-radius:18px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.01) 44%,rgba(212,168,71,.035));padding:36px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.hero-os:before{content:'';position:absolute;inset:-1px;background:linear-gradient(120deg,transparent 0 42%,rgba(212,168,71,.18) 45%,transparent 50%);opacity:.8;pointer-events:none}.hero-os:after{content:'';position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,71,.16),transparent 64%);filter:blur(2px)}
+.hero-copy{position:relative;z-index:2;max-width:620px}.hero-eyebrow{font-family:'JetBrains Mono',monospace;color:var(--amber);letter-spacing:.26em;font-size:10px;text-transform:uppercase;margin-bottom:16px}.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:82px;line-height:.88;letter-spacing:.015em;text-transform:uppercase;margin-bottom:20px}.hero-title em{font-style:normal;color:var(--amber);text-shadow:0 0 32px rgba(212,168,71,.22)}.hero-desc{max-width:540px;color:var(--text2);font-size:14px;line-height:1.8;margin-bottom:22px}.hero-cta{display:flex;gap:10px}.btn-os{border-radius:999px;border:1px solid var(--border2);background:rgba(255,255,255,.03);color:var(--text);padding:13px 18px;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.btn-os.gold{background:var(--amber);color:var(--black);border-color:var(--amber)}
+.pipeline-stage{position:absolute;left:36px;right:36px;bottom:34px;z-index:2;border:1px solid rgba(240,236,228,.09);border-radius:16px;background:rgba(10,9,8,.62);backdrop-filter:blur(18px);padding:18px}.pipe-line{position:absolute;left:56px;right:56px;top:50%;height:1px;background:linear-gradient(90deg,transparent,var(--amber),rgba(99,64,255,.8),var(--amber),transparent);opacity:.65}.pipe-line:after{content:'';position:absolute;left:0;top:-2px;width:80px;height:5px;background:var(--amber);filter:blur(8px);animation:pipe 5s linear infinite}@keyframes pipe{from{left:0}to{left:calc(100% - 80px)}}.pipe-nodes{position:relative;z-index:3;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.pipe-node{background:rgba(17,16,16,.88);border:1px solid rgba(240,236,228,.11);border-radius:12px;padding:12px 10px;min-height:72px}.pipe-num{font-family:'JetBrains Mono',monospace;color:var(--amber);font-size:9px;letter-spacing:.1em;margin-bottom:7px}.pipe-name{font-size:11px;text-transform:uppercase;font-weight:800;letter-spacing:.08em}.pipe-meta{font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4}
+.os-section{margin-top:18px}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section-title{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.section-title em{font-style:normal;color:var(--amber)}.section-link{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);letter-spacing:.1em;text-transform:uppercase}
+.action-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.action-card{min-height:142px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.012));padding:16px;position:relative;overflow:hidden;transition:.25s}.action-card:hover{transform:translateY(-3px);border-color:rgba(212,168,71,.4);box-shadow:0 16px 40px rgba(0,0,0,.24)}.action-card:after{content:'';position:absolute;right:-40px;bottom:-50px;width:130px;height:130px;background:radial-gradient(circle,rgba(212,168,71,.14),transparent 64%)}.action-ico{width:34px;height:34px;border:1px solid rgba(212,168,71,.35);border-radius:10px;display:grid;place-items:center;color:var(--amber);margin-bottom:22px;background:var(--adim)}.action-t{font-size:13px;font-weight:800;margin-bottom:6px}.action-d{font-size:11px;color:var(--text3);line-height:1.65}
+.builder-preview{display:grid;grid-template-columns:1fr 1fr;gap:12px}.prompt-matrix,.case-os{border:1px solid var(--border);border-radius:16px;background:rgba(17,16,16,.7);padding:16px}.matrix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}.matrix-cell{border:1px solid var(--border);border-radius:10px;padding:12px;background:rgba(255,255,255,.025)}.matrix-cell span{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);letter-spacing:.1em}.matrix-cell strong{display:block;margin-top:7px;font-size:12px}.case-card{height:195px;border-radius:12px;border:1px solid rgba(212,168,71,.18);background:linear-gradient(135deg,rgba(212,168,71,.12),rgba(0,0,0,.25)),url('') center/cover;position:relative;overflow:hidden;margin-top:14px}.case-card .case-glow{position:absolute;inset:auto 16px 16px 16px}.case-k{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}.case-t{font-family:'Barlow Condensed',sans-serif;font-size:38px;line-height:.95;text-transform:uppercase}.case-t em{font-style:normal;color:var(--amber)}
+.assistant-os{position:sticky;top:22px;display:flex;flex-direction:column;gap:12px}.ai-card{border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));padding:18px;backdrop-filter:blur(12px)}.ai-head{display:flex;gap:12px;align-items:center;margin-bottom:14px}.ai-orb{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--amber);color:var(--amber);box-shadow:0 0 28px rgba(212,168,71,.2)}.ai-title{font-weight:800;font-size:13px}.ai-sub{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text3);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}.ai-text{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:14px}.ai-chip{display:block;width:100%;text-align:left;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.025);color:var(--text2);font-size:11px;margin-top:7px}.stat-stack{display:grid;gap:8px}.stat-row{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);border-radius:11px;padding:11px 12px;background:rgba(255,255,255,.02)}.stat-row span{font-size:11px;color:var(--text3)}.stat-row strong{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--amber)}
+@media(max-width:1100px){.os-shell{grid-template-columns:1fr}.assistant-os{position:relative;top:0;grid-row:auto}.hero-title{font-size:62px}.pipe-nodes{grid-template-columns:repeat(3,1fr)}.pipeline-stage{position:relative;left:auto;right:auto;bottom:auto;margin-top:28px}.hero-os{min-height:auto}.action-grid,.builder-preview{grid-template-columns:1fr}.os-search{display:none}}
+
 </style>
 </head>
 <body>
@@ -225,18 +250,92 @@ body{font-family:'Syne',sans-serif;background:var(--black);color:var(--text);dis
 
 <div class="main">
 
-<div class="page on" id="pg-home">
-  <div class="pg-eye">Tổng quan</div>
-  <div class="pg-title">AI CREATIVE<br/><em>PLAYBOOK</em></div>
-  <p class="pg-desc">Bộ công cụ và kỹ thuật AI được chắt lọc từ thực chiến của Hoàn Trương — dành riêng cho creative team. Từ gen ảnh, video đến voice over, tất cả đều có workflow rõ ràng và prompt mẫu sẵn sàng copy.</p>
-  <div class="img-showcase"><img id="img-toolstack" alt="AI Tool Stack"/><div class="img-caption">AI Tool Stack — từ idea → image → video → music → distribution</div></div>
-  <div class="grid">
-    <div class="card" onclick="go('img-tools')"><div class="card-num">01 — IMAGE</div><div class="card-t">Tạo & sửa hình ảnh</div><div class="card-d">Higgsfield, Freepik AI, RunningHub — gen nhanh đến faceswap chuyên sâu</div></div>
-    <div class="card" onclick="go('vid-tools')"><div class="card-num">02 — VIDEO</div><div class="card-t">Tạo video AI</div><div class="card-d">Kling 3.0, Seedance 2.0 — motion control đến storyboard to video</div></div>
-    <div class="card" onclick="go('aud-tools')"><div class="card-num">03 — AUDIO</div><div class="card-t">Âm thanh</div><div class="card-d">Google AI Studio VO, Suno AI nhạc nền chuyên nghiệp</div></div>
-    <div class="card" onclick="go('structure')"><div class="card-num">04 — PROMPT</div><div class="card-t">Prompting</div><div class="card-d">Cấu trúc 8 thành phần, training GPT sinh prompt riêng</div></div>
+
+<div class="page on os-home" id="pg-home">
+  <div class="os-shell">
+    <div class="os-top">
+      <div class="os-mark">
+        <div class="os-logo">AI</div>
+        <div><div class="os-kicker">Creative production system</div><div class="os-name">A.I Creative Playbook</div></div>
+      </div>
+      <div class="os-search">⌘K  Search workflow, prompt, tool, case...</div>
+      <div class="os-actions"><button class="os-mini" onclick="go('workflow')">Open OS</button><button class="os-primary" onclick="toggleChat()">Ask AI Trương</button></div>
+    </div>
+
+    <main>
+      <section class="hero-os">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">Present by Hoan Truong</div>
+          <h1 class="hero-title">A.I CREATIVE<br/><em>OPERATING SYSTEM</em></h1>
+          <p class="hero-desc">Một app nội bộ biến playbook thành hệ điều hành sản xuất: nhận brief, build prompt, gen image, tạo video, fix feedback và đóng gói thành output creative sẵn giao team.</p>
+          <div class="hero-cta"><button class="btn-os gold" onclick="go('workflow')">Start Workflow</button><button class="btn-os" onclick="go('structure')">Build Prompt</button><button class="btn-os" onclick="go('casestudy')">View Case</button></div>
+        </div>
+        <div class="pipeline-stage">
+          <div class="pipe-line"></div>
+          <div class="pipe-nodes">
+            <div class="pipe-node"><div class="pipe-num">01</div><div class="pipe-name">Brief</div><div class="pipe-meta">Analyze task</div></div>
+            <div class="pipe-node"><div class="pipe-num">02</div><div class="pipe-name">AI Agent</div><div class="pipe-meta">Train context</div></div>
+            <div class="pipe-node"><div class="pipe-num">03</div><div class="pipe-name">Prompt</div><div class="pipe-meta">Build command</div></div>
+            <div class="pipe-node"><div class="pipe-num">04</div><div class="pipe-name">Generate</div><div class="pipe-meta">Image / video</div></div>
+            <div class="pipe-node"><div class="pipe-num">05</div><div class="pipe-name">Fix</div><div class="pipe-meta">Feedback round</div></div>
+            <div class="pipe-node"><div class="pipe-num">06</div><div class="pipe-name">Final</div><div class="pipe-meta">Deliver output</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="os-section">
+        <div class="section-head"><h2 class="section-title">Quick <em>Actions</em></h2><span class="section-link">Playbook features</span></div>
+        <div class="action-grid">
+          <div class="action-card" onclick="go('multiref')"><div class="action-ico">@</div><div class="action-t">Multi Reference</div><div class="action-d">Khóa face, outfit, background bằng element để tạo KV bám nhân vật.</div></div>
+          <div class="action-card" onclick="go('faceswap')"><div class="action-ico">◐</div><div class="action-t">Faceswap Lab</div><div class="action-d">Đổi mặt / đổi cả đầu, giữ ánh sáng và tỷ lệ hài hoà với KV.</div></div>
+          <div class="action-card" onclick="go('posing')"><div class="action-ico">↯</div><div class="action-t">Copy Posing</div><div class="action-d">Chuyển pose chính xác từ ảnh ref sang talent của team.</div></div>
+          <div class="action-card" onclick="go('startend')"><div class="action-ico">▶</div><div class="action-t">Start-End Frame</div><div class="action-d">Tạo chuyển động từ frame đầu đến frame cuối bằng Kling / Freepik.</div></div>
+          <div class="action-card" onclick="go('storyboard')"><div class="action-ico">▦</div><div class="action-t">Storyboard to Video</div><div class="action-d">Biến board thành video bằng Seedance 2.0, dùng cho iTVC / social clip.</div></div>
+          <div class="action-card" onclick="go('music')"><div class="action-ico">♫</div><div class="action-t">Music & VO</div><div class="action-d">Google AI Studio cho VO, Suno cho nhạc nền bám mood TVC.</div></div>
+        </div>
+      </section>
+
+      <section class="os-section builder-preview">
+        <div class="prompt-matrix">
+          <div class="section-head"><h2 class="section-title">Prompt <em>System</em></h2><span class="section-link">8-part formula</span></div>
+          <div class="matrix-grid">
+            <div class="matrix-cell"><span>01</span><strong>Subject</strong></div><div class="matrix-cell"><span>02</span><strong>Action</strong></div><div class="matrix-cell"><span>03</span><strong>Styling</strong></div>
+            <div class="matrix-cell"><span>04</span><strong>Camera</strong></div><div class="matrix-cell"><span>05</span><strong>Lighting</strong></div><div class="matrix-cell"><span>06</span><strong>Background</strong></div>
+            <div class="matrix-cell"><span>07</span><strong>Style</strong></div><div class="matrix-cell"><span>08</span><strong>Quality</strong></div><div class="matrix-cell"><span>–</span><strong>Negative</strong></div>
+          </div>
+        </div>
+        <div class="case-os">
+          <div class="section-head"><h2 class="section-title">Case <em>Study</em></h2><span class="section-link">Cindy iTVC</span></div>
+          <div class="case-card"><div class="case-glow"><div class="case-k">AI iTVC Pipeline</div><div class="case-t">Vì đó là em,<br/><em>là Cindy!</em></div></div></div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="assistant-os">
+      <div class="ai-card">
+        <div class="ai-head"><div class="ai-orb">✦</div><div><div class="ai-title">AI Trương</div><div class="ai-sub">Playbook assistant</div></div></div>
+        <p class="ai-text">Tôi được nạp não bằng toàn bộ tài liệu của Hoàn. Muốn tạo prompt, chọn tool, xử lý faceswap hay build storyboard thì gọi tôi.</p>
+        <button class="ai-chip" onclick="toggleChat()">→ Hỏi về task đang làm</button>
+        <button class="ai-chip" onclick="toggleChat();switchTab('build')">→ Mở Prompt Builder</button>
+        <button class="ai-chip" onclick="go('workflow')">→ Xem production workflow</button>
+      </div>
+      <div class="ai-card">
+        <div class="os-kicker">Production Snapshot</div>
+        <div class="stat-stack">
+          <div class="stat-row"><span>Image workflow</span><strong>~11.5h</strong></div>
+          <div class="stat-row"><span>Video workflow</span><strong>~24h</strong></div>
+          <div class="stat-row"><span>Core modules</span><strong>04</strong></div>
+          <div class="stat-row"><span>Playbook pages</span><strong>48</strong></div>
+        </div>
+      </div>
+      <div class="ai-card">
+        <div class="os-kicker">Tool Stack</div>
+        <div class="tag-row" style="margin:12px 0 0"><span class="tag a">ChatGPT</span><span class="tag a">Gemini</span><span class="tag a">NanoBanana</span><span class="tag a">Kling</span><span class="tag a">Veo</span><span class="tag a">Suno</span><span class="tag a">Higgsfield</span><span class="tag a">Freepik</span></div>
+      </div>
+    </aside>
   </div>
 </div>
+
 
 <div class="page" id="pg-workflow">
   <div class="pg-eye">Chương 01 · AI Tool</div>
